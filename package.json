@@ -1,0 +1,17 @@
+{
+  "name": "aplicacion_de_tareas",
+  "version": "1.0.0",
+  "description": "Se usara el stack mern y jest para el testing. Se construira usando el enfoque TDD.",
+  "main": "index.spec.js",
+  "scripts": {
+    "test": "set NODE_OPTIONS=--experimental-vm-modules && jest",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jest": "^29.6.2"
+  }
+}
