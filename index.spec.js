@@ -1,10 +1,34 @@
-import app from '../src/app';
-import request from 'supertest';
+import { retornaNueve } from "./index";
+import { dosNombresIguales } from "./index";
 
 
-describe('GET /', () => {
-    test("debe responder con un codigo de estado 200", async () => {
-        const response = await request(app).get("/").send();
-        expect(response.statusCode).toBe(200);
-}); 
-});
+
+describe("probando matchers", () => {
+    describe("toBe", () => {
+        test("debe entregar 9", ()=>{
+            //ajusta
+            let numero;
+            //actua
+            numero= retornaNueve()
+            //afirma 
+            expect(numero).toBe(9);
+        }
+        )
+        test("debe indicar tienen el mismo nombre", ()=>
+        {
+            //ajusta
+            let persona_1;
+            let persona_2;
+            let nombres;
+            //actua
+            nombres= dosNombresIguales()
+            persona_1=nombres[0]
+            persona_2=nombres[1]
+            //afirma
+            expect(persona_1).toEqual(persona_2)
+        }
+
+        )
+    }
+    )
+})
