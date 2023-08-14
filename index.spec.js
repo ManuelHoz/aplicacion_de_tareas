@@ -1,5 +1,6 @@
 import { retornaNueve } from "./index";
 import { dosNombresIguales } from "./index";
+import {definido} from "./index"
 
 
 
@@ -14,6 +15,9 @@ describe("probando matchers", () => {
             expect(numero).toBe(9);
         }
         )
+    }
+    )
+    describe("toEqual", () => {
         test("debe indicar tienen el mismo nombre", ()=>
         {
             //ajusta
@@ -22,13 +26,28 @@ describe("probando matchers", () => {
             let nombres;
             //actua
             nombres= dosNombresIguales()
-            persona_1=nombres[0]
-            persona_2=nombres[1]
+            persona_1=nombres.nombre_1
+            persona_2=nombres.nombre_2
             //afirma
             expect(persona_1).toEqual(persona_2)
         }
-
         )
     }
     )
-})
+    describe("toBeDefined", ()=>{
+        describe("verifica si esta funcion esta definida",()=>{
+            //ajusta
+            let valor
+            //actua
+            valor= definido()
+            //afirma 
+            expect(valor).toBeDefined();
+
+        }
+        )
+
+
+    }
+    )
+}
+)

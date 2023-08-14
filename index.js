@@ -2,7 +2,15 @@ export function retornaNueve(){
     return 9;
 }
 export function dosNombresIguales(){
-    let nombre_1="juan"
-    let nombre_2="juan"
-    return nombre_1, nombre_2;
+    let nombres={
+        nombre_1:"Juan",
+        nombre_2:"Juan"
+    }
+    return nombres;
+}
+
+export function definido(){
+    //el valor es un string definido
+    const valorDefinido="undefined"
+    return valorDefinido;
 }
