@@ -1,6 +1,7 @@
 import { retornaNueve } from "./index";
 import { dosNombresIguales } from "./index";
 import {definido} from "./index"
+import {soyFalso} from "./index"
 
 
 
@@ -47,7 +48,18 @@ describe("probando matchers", () => {
         )
 
 
+    })
+    describe("toBeFalsy",()=>{
+        describe("verifica si la funcion es falsa", ()=>{
+            //ajusta
+            let valor
+            //actua
+            valor=soyFalso()
+            //afirma
+            expect(valor).toBeFalsy();
+        })
     }
     )
+    
 }
 )

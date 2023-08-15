@@ -14,3 +14,8 @@ export function definido(){
     const valorDefinido="undefined"
     return valorDefinido;
 }
+
+export function soyFalso(){
+    const soy=false
+    return soy;
+}
